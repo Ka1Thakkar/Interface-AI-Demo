@@ -5,6 +5,7 @@ import { useState } from "react";
 import Statistics from "./Statistics";
 import { Area, CartesianGrid, ComposedChart, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import Agents from "./Agents";
+import { motion } from 'framer-motion';
 
 const Ranges = [
     'Today',
@@ -66,7 +67,12 @@ const Overview = () => {
         },
     ];
     return (
-        <div className="w-full min-h-fit border-2 border-black/10 p-5 lg:p-10">
+        <motion.div
+            initial={{ opacity: 0}}
+            animate={{ opacity: 1}}
+            transition={{ease: 'easeInOut', duration : 0.5 }}
+            className="w-full min-h-fit border-2 border-black/10 p-5 lg:p-10"
+        >
             <div className="flex items-center justify-between">
                 <h1 className="text-xl font-semibold">
                     Overview
@@ -127,7 +133,7 @@ const Overview = () => {
                 </div>
             </div>
             <Agents />
-        </div>
+        </motion.div>
     );
 }
 
