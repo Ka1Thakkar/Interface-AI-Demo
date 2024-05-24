@@ -21,32 +21,48 @@ const Overview = () => {
     const [range, setRange] = useState('Today')
     const data = [
         {
-            TY: 800,
+            TY: 500,
             LY: 0
         },
         {
+            TY: 1000,
+            LY: 500
+        },
+        {
             month: 'Jan',
+            TY: 300,
+            LY: 1000
+        },
+        {
             TY: 500,
             LY: 900
         },
         {
             month: 'Feb',
             TY: 1000,
-            LY: 1500
-        },
-        {
-            month: 'March',
-            TY: 3000,
-            LY: 1000
-        },
-        {
-            month: 'April',
-            TY: 1500,
             LY: 1750
         },
         {
             TY: 2000,
-            LY: 2750
+            LY: 200
+        },
+        {
+            month: 'March',
+            TY: 2500,
+            LY: 900
+        },
+        {
+            TY: 2000,
+            LY: 2100
+        },
+        {
+            month: 'April',
+            TY: 1500,
+            LY: 2300
+        },
+        {
+            TY: 2100,
+            LY: 3000
         },
     ];
     return (

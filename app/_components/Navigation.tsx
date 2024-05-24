@@ -5,7 +5,7 @@ const Navigation = () => {
     const toggleOpen = useSidebar((state) => state.toggleOpen)
     const isOpen = useSidebar((state) => state.isOpen)
     return (
-        <nav className="md:px-10 px-5 py-5 flex flex-grow justify-between w-full items-center h-fit border-b-2 border-black/10 bg-white sticky top-0 gap-5 z-[999]">
+        <nav className="md:px-10 px-5 py-5 flex flex-grow justify-between w-full items-center h-fit border-b-2 border-black/10 bg-white sticky top-0 gap-5 z-[999] transition-all ease-in-out">
             <button onClick={() => {
                 toggleOpen()
             }}>

@@ -17,7 +17,7 @@ export default function Home() {
         });
     }, []);
   return (
-    <main id="mainDiv" className="w-full overflow-y-auto">
+    <main id="mainDiv" className="w-full overflow-y-auto transition-all ease-in-out">
       <Navigation />
       <Main />
     </main>

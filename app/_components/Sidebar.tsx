@@ -83,10 +83,10 @@ const Sidebar = () => {
         <AnimatePresence>
             {isOpen &&
                 <motion.aside
-                    initial={{ opacity: 0}}
-                    animate={{ opacity: 1}}
-                    exit={{ opacity: 0 }}
-                    transition={{ease: 'easeInOut', duration : 0.1 }}
+                    initial={{ opacity: 0, x: -300}}
+                    animate={{ opacity: 1, x: 0}}
+                    exit={{ opacity: 0, x: -300}}
+                    transition={{ease: 'easeInOut', duration : 0.25 }}
                     className={cn('h-screen top-0 left-0 absolute bg-white z-[99999] md:static sm:min-w-fit border-r-2 border-black/10 px-5 py-10 overflow-y-auto')}>
                     <div className='flex flex-col justify-between h-full gap-10'>
                         <div>

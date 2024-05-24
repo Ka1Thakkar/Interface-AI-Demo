@@ -1,5 +1,6 @@
 import { TrendUp } from "@phosphor-icons/react";
 import { AnimatedCounter } from "react-animated-counter";
+import CountUp from "react-countup";
 
 interface StatisticsProps {
     title: string;
@@ -15,8 +16,17 @@ const Statistics = ({ title, value, percentage }: StatisticsProps) => {
             </p>
             <div className="flex justify-between items-center">
                 <div className="flex gap-2 items-center">
-                    <span className="text-xl font-medium">$</span>
-                    <AnimatedCounter value={value} incrementColor="#ABE423" fontSize="25px" decrementColor="#E42323" includeDecimals={false} containerStyles={{ textAlign: 'left', width: 'fit-content' }} />
+                    {/* <span className="text-xl font-medium">$</span> */}
+                    {/* <AnimatedCounter value={value} incrementColor="#ABE423" fontSize="25px" decrementColor="#E42323" includeDecimals={false} containerStyles={{ textAlign: 'left', width: 'fit-content' }} /> */}
+                    <CountUp start={0}
+                        end={value}
+                        duration={1.5}
+                        separator=", "
+                        prefix="$ "
+                        suffix=""
+                        className="text-2xl"
+                        useEasing={true}
+                        />
                 </div>
                 <div className="flex flex-col text-[#ABE423] items-end">
                     <p>
