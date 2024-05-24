@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={manrope.className + " flex overflow-hidden top-0 w-screen h-screen"}>
+      <body className={manrope.className + " flex overflow-x-hidden top-0 w-screen h-screen"}>
         <Sidebar />
         {children}
       </body>
